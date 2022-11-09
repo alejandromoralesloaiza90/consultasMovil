@@ -34,7 +34,7 @@ export class ComponentValidacionFraccionesComponent implements OnInit {
     if (this.myForm.valid) {
 
       this.cargando = true;
-
+      
       this.fracciones.cargarFracciones(fraccionColocador).subscribe(fracciones => {
         
         this.consultasFracciones = Object.values(fracciones);
@@ -43,7 +43,7 @@ export class ComponentValidacionFraccionesComponent implements OnInit {
           this.condicion = "no existen registos con ese numero de fraccion";
         } else {
           this.cargando = false;
-          this.ocultarTexto = true;
+          this.ocultarTexto = true;          
           this.fraccion2 = fraccionColocador;
           this.validacionRed = true;
         }
